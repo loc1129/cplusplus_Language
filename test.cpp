@@ -1,5 +1,5 @@
-#include <iostream>
-#include <string>
+//#include <iostream>
+//#include <string>
 
 //LocCase 1: 函数隐藏
 //using namespace std;
@@ -355,49 +355,67 @@
 //}
 
 //LocCase 13: 虚函数与各种cast
-#include <iostream>
+//#include <iostream>
 
-using namespace std;
+//using namespace std;
 
-class BD
-{
-	public:
-		void f()
-		{
-			cout << "BD::f(int)" << endl;
-		}
+//class BD
+//{
+	//public:
+		//void f()
+		//{
+			//cout << "BD::f(int)" << endl;
+		//}
 
-		virtual void g()
-		{
-			cout << "BD::g()"<<endl;	
-		}
+		//virtual void g()
+		//{
+			//cout << "BD::g()"<<endl;	
+		//}
 
-};
+//};
 
-class CD : public BD
-{
-	public:
-		void f()
-		{
-			cout << "CD::f(int)" << endl;	
-		}
+//class CD : public BD
+//{
+	//public:
+		//void f()
+		//{
+			//cout << "CD::f(int)" << endl;	
+		//}
 
-		virtual void g()
-		{
-			cout << "CD::g()" << endl;	
-		}
-};
+		//virtual void g()
+		//{
+			//cout << "CD::g()" << endl;	
+		//}
+//};
 
-int main()
-{
-	BD* a = dynamic_cast<BD*>(new CD());
-	CD* b = static_cast<CD*>(new BD());
+//int main()
+//{
+	//BD* a = dynamic_cast<BD*>(new CD());
+	//CD* b = static_cast<CD*>(new BD());
 
-	a->f(); //BD::f(int)
-	a->g(); //CD::g()
-	b->f(); //CD::f(int)
-	b->g(); //BD::g()
+	//a->f(); //BD::f(int)
+	//a->g(); //CD::g()
+	//b->f(); //CD::f(int)
+	//b->g(); //BD::g()
 	
-	return 0;
-}
+	//return 0;
+//}
+
+//LocCase 14: break for for double for loop
+//#include <iostream>
+//int main()
+//{
+	//for(int i = 0; i < 10; ++i)
+	//{
+		//for(int j = 0; j < 10; ++j)
+		//{
+			//if(j == 5)
+				//break;
+		//}
+
+		//std::cout << i << std::endl;
+	//}
+
+	//return 0;
+//}
 

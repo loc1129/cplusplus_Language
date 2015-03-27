@@ -12,7 +12,7 @@ all:$(TARGET)
 $(TARGET): $(OBJS)
 	$(CLANG) $^ -o $@ $(INCLUDES) $(LIBS) $(LINKFLAGS)
 $(OBJS): $(SRCS)
-	$(CLANG) -c $< $(CCFLAGS)
+	$(CLANG) -c $^ $(CCFLAGS)
 
 clean:
 	rm $(TARGET)
