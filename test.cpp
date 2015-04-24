@@ -419,3 +419,16 @@
 	//return 0;
 //}
 
+//LocCase 15: dynamic cast empty class
+class A
+{};
+
+class B : public A
+{};
+
+int main()
+{
+	A * aa = new B;
+	B * bb = dynamic_cast<B*>(aa);
+	return 0;
+}
