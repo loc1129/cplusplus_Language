@@ -61,11 +61,7 @@
 	//public:
 		//virtual void f(int)
 		//{
-			//cout << "CD::f(int)" << endl;	
-		//}
-//};
-
-//int main()
+			//cout << "CD::f(int)" << endl;	//} //}; //int main()
 //{
 	//BD * pD = new CD();
 	//pD->f(1); //output: "BD::f(int)"
@@ -420,15 +416,25 @@
 //}
 
 //LocCase 15: dynamic cast empty class
-class A
-{};
+//fail to compile
+//class A
+//{
+//};
 
-class B : public A
-{};
+//class B : public A
+//{};
 
+//int main()
+//{
+	//A * aa = new B;
+	//B * bb = dynamic_cast<B*>(aa);
+	//return 0;
+//}
+
+//LocCase 16: sizeof nullptr
+#include <iostream>
 int main()
 {
-	A * aa = new B;
-	B * bb = dynamic_cast<B*>(aa);
-	return 0;
+   std::cout << "sizeof void*: " << sizeof(void*) << " sizeof nullptr: " << sizeof(nullptr) << std::endl;
+   return 0;
 }

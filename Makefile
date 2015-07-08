@@ -1,18 +1,18 @@
-TARGET = test_app
+TARGET = test_app 
 SRCS = $(wildcard *.cpp)
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 CC = g++
 CLANG = clang++
 INCLUDES = 
 LIBS = 
-CCFLAGS = 
-LINKFLAGS = -std=c++11
+CCFLAGS = -std=c++11
+LINKFLAGS = 
 
 all:$(TARGET)
 $(TARGET): $(OBJS)
-	$(CLANG) $^ -o $@ $(INCLUDES) $(LIBS) $(LINKFLAGS)
+	$(CC) $^ -o $@ $(INCLUDES) $(LIBS) $(LINKFLAGS)
 $(OBJS): $(SRCS)
-	$(CLANG) -c $^ $(CCFLAGS)
+	$(CC) -c $^ $(CCFLAGS)
 
 clean:
 	rm $(TARGET)
@@ -20,9 +20,3 @@ clean:
 
 .PHONY:all
 
-
-
-#$(TARGET): $(OBJS)
-	#$(CC) $^ -o $@ $(INCLUDES) $(LIBS)
-#$(OBJS): $(SRCS)
-	#$(CC) -c $< $(CCFLAGS)
